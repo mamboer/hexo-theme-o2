@@ -1,0 +1,53 @@
+# Logo Url
+# Please enter an absolute path to your logo file
+# or remove the following line with replacing logo-header.png with your own logo
+logo:
+
+# Header
+menu:
+  Home: /
+  # Delete this row if you don't want categories in your header nav bar
+  Categories:
+  About: /about/index.html
+
+# Article list grouped by year
+groupByYear: true
+
+# Content
+fancybox: true
+
+# Thumbnail
+thumbnail: true
+
+# Scroll Loading
+scrollLoading: true
+
+# Sidebar
+sidebar: left # sidebar's position (left or right)
+social_links:
+  twitter:
+  facebook:
+  google-plus:
+  github: https://github.com/ppoffice/hexo-theme-hueman
+  weibo:
+  rss:
+widgets:
+- recent_posts
+- category
+- archive
+- tag
+- tagcloud
+- links
+
+# Links
+links:
+  Hexo: http://hexo.io
+
+# Don't Use Google APIs if you are in google-blocked areas
+use_google_apis: false
+
+# Miscellaneous
+google_analytics:
+favicon: /favicon.png
+fb_admins:
+fb_app_id:
