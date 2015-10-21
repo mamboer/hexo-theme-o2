@@ -1,6 +1,7 @@
 index:
   home: '主页'
   about: '关于'
+  blog: '博客'
   search: '搜索'
   archive: '归档'
   category: '分类：'

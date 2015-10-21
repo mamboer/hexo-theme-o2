@@ -1,6 +1,7 @@
 @import "nib"
 @import "_variables"
 @import "_extend"
+@import "_partial/fonts"
 
 global-reset()
 
@@ -43,16 +44,6 @@ body
 .clear
   clear: both
 
-.logo
-  display: block
-  padding: 10px 0
-  width: logo-width
-  height: logo-height
-  background-image: url(logo-img)
-  background-position: 0px 10px
-  background-repeat: no-repeat
-  background-size: logo-width logo-height
-
 .main-body
   margin-top: - nav-height
   background-color: color-main-background
@@ -69,7 +60,7 @@ body
     padding-left: sidebar-width
     background: url(images/s-left.png) repeat-y left 0
 
-#main
+.main
   if sidebar is right
     float: left
   else
@@ -80,7 +71,7 @@ body
   .main-body-header
     background: #fff
     position: relative
-    padding: 18px 30px 17px
+    padding: 20px 30px
     border-bottom: 1px solid color-border-light
     color: color-default + #111
     font-size: 16px

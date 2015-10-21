@@ -1,4 +1,4 @@
-#sidebar
+.sidebar
   if sidebar is right
     float: right
     margin-right: - sidebar-width
@@ -8,64 +8,6 @@
   width: sidebar-width
   .sidebar-toggle
     display: none
-  .sidebar-top
-    clearfix()
-    background: color-link
-    padding: 15px 30px
-    .sidebar-top-inner
-      clearfix()
-    p
-      float: left
-      color: rgba(255,255,255,0.8)
-      font-size: 16px
-      font-weight: 600
-      text-transform: uppercase
-      line-height: 24px
-      padding: 3px 0
-    .social-links
-      float: right
-      position: relative
-      padding-top: 2px
-      li
-        float: left
-        margin-left: 8px
-        a
-          &:hover
-            i
-              &:before
-                color: #fff
-      .social-tooltip
-        position: relative
-        &:hover
-          &:after
-            top: -41px
-            background: #fff
-            font-size: 14px
-            color: #666
-            content: attr(title)
-            display: block
-            right: 0
-            padding: 5px 15px
-            position: absolute
-            white-space: nowrap
-            border-radius: 3px
-            box-shadow: 0 0 2px rgba(0,0,0,0.2)
-            text-transform: uppercase
-            z-index: 1
-          &:before
-            top: -10px
-            right: 8px
-            border: solid
-            border-color: #fff transparent
-            border-width: 5px 5px 0 5px
-            content: ""
-            display: block
-            position: absolute
-            z-index: 2
-    i
-      color: rgba(255,255,255,0.7)
-      font-size: font-icon-profile-size
-      width: font-icon-profile-size
 
 #article-nav
   clearfix()
@@ -111,7 +53,7 @@
   color: #666
 
 .widget-wrap
-  padding: 30px 30px 20px
+  padding: 20px 30px 20px
 
 .widget-title
   font-size: 15px

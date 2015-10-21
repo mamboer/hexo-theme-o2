@@ -4,13 +4,33 @@
 
   // Highlight current nav item
   $('#main-nav > li > .main-nav-list-link').each(function(){
-  	if($('.page-title-link').length > 0){
-      if($(this).html().toUpperCase() == $('.page-title-link').html().toUpperCase()){
-        $(this).addClass('current');
-      } else if ($(this).attr('href') == $('.page-title-link').attr('data-url')){
-        $(this).addClass('current');
+  	var $me = $(this),
+      $titleLink = $('.page-title-link'),
+      pathName = location.pathname,
+      curHref = $me.attr('href');
+
+    if($titleLink.length > 0){
+      if($me.html().toUpperCase() == $titleLink.html().toUpperCase()){
+        $me.addClass('current');
+      } else if (curHref === $titleLink.attr('data-url')){
+        $me.addClass('current');
       }
+      return;
     }
+
+    if(pathName === curHref && curHref === '/'){
+      $me.addClass('current');
+      return;
+    }
+
+    if(pathName === '/index.html' && curHref === '/'){
+      $me.addClass('current');
+      return;
+    }
+    if(pathName.indexOf(curHref) === 0 && curHref!=='/'){
+      $me.addClass('current');
+    }
+
   });
 
   // Sidebar expend

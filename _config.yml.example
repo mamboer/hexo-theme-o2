@@ -48,6 +48,7 @@ use_google_apis: false
 
 # Miscellaneous
 google_analytics:
+baidu_analytics:
 favicon: /favicon.png
 fb_admins:
 fb_app_id:

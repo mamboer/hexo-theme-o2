@@ -85,28 +85,34 @@ $nav-link
       float: right
 
 .search-form
-  padding: 14px 15px 16px
+  padding: 10px 15px 16px
   height: 50px
   overflow: hidden
   box-sizing: border-box
+  position:relative;
   &:before
+    position:absolute
+    top:17px
+    right:24px
     content: "\f002"
-    margin-right: 8px
     color: color-nav-foreground
     font: normal normal normal 16px/1 FontAwesome
 
 .search-form-input
   -webkit-appearance: textarea
-  width: 100px
-  border: none !important
+  width: 150px
+  padding: 2px 30px 2px 10px
+  border: 1px solid #333
+  border-radius:20px
   outline: none !important
   background: none !important
   line-height: line-height
   transition: 0.2s ease-in
   font: 16px font-sans
   color: color-nav-foreground
+  
   &:focus
-    width: 200px
+    width: 280px
   &::-webkit-search-results-decoration
   &::-webkit-search-cancel-button
     -webkit-appearance: none
