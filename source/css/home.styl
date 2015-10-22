@@ -1,0 +1,81 @@
+@import "nib"
+@import "_variables"
+@import "_extend"
+@import "_partial/fonts"
+
+global-reset()
+
+input, button
+  margin: 0
+  padding: 0
+  &::-moz-focus-inner
+    border: 0
+    padding: 0
+
+html, body, #container
+  height: 100%
+
+::selection
+  color: white
+  background: color-link
+
+body
+  background: #fff
+  font: font-size font-roboto
+  -webkit-text-size-adjust: 100%
+  position:relative;
+
+.container
+  position: relative
+  padding: 0 container-padding
+
+.container-inner
+  clearfix()
+  max-width: container-inner-max-width
+  min-width: container-inner-min-width
+  width: 100%
+  margin: 0 auto
+
+.left, .alignleft
+  float: left
+
+.right, .alignright
+  float: right
+
+.clear
+  clear: both
+  
+.circle
+  border-radius:50%
+
+.card
+  position:absolute
+  -webkit-transform:translateY(-50%)
+  transform:translateY(-50%)
+  width:100%
+  top:50%
+  left:0
+  text-align:center
+  &-logo {
+    max-width:150px
+  }
+  &-tit
+    font-size:1.5em
+    margin:0.8em 0
+    font-weight:bold
+    text-transform:uppercase
+  &-desc
+    margin-bottom: 1em
+  .link
+    display:inline
+    &:after
+      margin-right: 2px
+      margin-left: 2px
+      content: '/'
+    &:last-child
+      &:after
+        margin:0
+        content:''
+  a
+    color:#9f9f9f
+    text-decoration:none

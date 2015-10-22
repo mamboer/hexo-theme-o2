@@ -9,18 +9,18 @@
  *  Toggle Sidebar s1 : 959px > 480px
 /* ------------------------------------------------------------------------- */
 @media only screen and (min-width: 480px) and (max-width: 959px)
-  #header
+  .header
     padding-bottom: sidebar-toggle-width
     .nav-container-inner
       display: block !important
-      #main-nav
-        .main-nav-more > ul
-          .main-nav-list-child
-            position: relative
-            padding: 0px
-      .search-form-input
-        &:focus
-          width: 100px
+  .main-nav
+    .main-nav-more > ul
+      .main-nav-list-child
+        position: relative
+        padding: 0px
+  .search-form-input
+    &:focus
+      width: 100px
   .main-body
     margin-top: - sidebar-toggle-width
   .main-body-inner
@@ -30,7 +30,7 @@
     else
       padding-left: sidebar-toggle-width
       background-position: -290px 0 !important
-    #sidebar
+    .sidebar
       clearfix()
       if sidebar is right
         right: 0
@@ -92,7 +92,7 @@
               &:before
                 display: none
 
-  #main
+  .main
     .main-body-header,
     .archive-year-wrap
       padding: 12px 30px
@@ -103,24 +103,42 @@
 @media only screen and (max-width: 479px)
   .container
     padding: 0px
-  #header
+  .social-wrap
+    float:none
+    text-align:center
+    display:none
+  .social-links
+    float:none
+    li
+      float:none
+      display:inline
+      margin:0 4px
+  .header
+    background:#23232e
+    &-title
+      height:auto
     .logo-wrap
       width: 100%
       display: block
       text-align: center
+      float:none
       .logo
         margin: 0 auto
     .subtitle-wrap
+      float:none
       display: block
       width: 100%
       margin-left: 0px
+      padding-top:0
+      padding-bottom:15px
+      text-align:center
     .nav-container
       padding: 0px
-      #main-nav-toggle
+      .main-nav-toggle
         display: block
       .nav-container-inner
         display: none
-      #main-nav
+      .main-nav
         display: block
         float: none
         .main-nav-list-item,
@@ -153,7 +171,7 @@
               padding-left: 30px
         a
           border-bottom: 1px solid rgba(255,255,255,0.06)
-      #sub-nav
+      .sub-nav
         float: none
         .search-form
           &:before
@@ -164,7 +182,7 @@
   .main-body-inner
     padding: 0px
     background: none
-  #main
+  .main
     float: none
     .main-body-header,
     .archive-year-wrap
@@ -183,7 +201,7 @@
     width: 100%
     .article-summary-inner
       margin: 15px 15px 15px 0
-  #sidebar
+  .sidebar
     float: none
     margin: 0px
     width: 100%
@@ -193,11 +211,14 @@
       padding: 15px
     .widgets-container
       padding-bottom: 15px
-  #footer
+  .footer
     margin-top: 0px
-    #back-to-top
+    .back-to-top
       box-shadow: 0 1px 1px rgba(0,0,0,0.1), inset 0 1px 0 rgba(0,0,0,0.05);
     .logo
+      &-wrap
+        float:none
+        margin:15px 0 10px
       margin: 0 auto
     .credit
       text-align: center

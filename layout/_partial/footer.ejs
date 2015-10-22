@@ -1,17 +1,15 @@
-<footer id="footer">
-  <% if (theme.sidebar === 'bottom'){ %>
+<footer id="footer" class="footer">
+    <% if (theme.sidebar === 'bottom'){ %>
     <%- partial('_partial/sidebar') %>
-  <% } %>
-  <div class="container">
-    <div class="container-inner">
-      <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
-      <div class="credit">
-        <h1 class="logo-wrap">
-          <a href="<%- url_for() %>" class="logo"></a>
-        </h1>
-        <p>&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %></p>
-        <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
-      </div>
+    <% } %>
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" class="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap"><a href="<%- url_for() %>" class="logo"><span class="logo-icon">JDC</span></a></h1>
+                <p>&copy;<%= date(new Date(), 'YYYY') %> <%= config.author || config.title %></p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/o2team/hexo-theme-o2" target="_blank">O2</a></p>
+            </div>
+        </div>
     </div>
-  </div>
 </footer>
