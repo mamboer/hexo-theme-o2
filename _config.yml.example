@@ -7,7 +7,7 @@ logo:
 menu:
   Home: /
   # Delete this row if you don't want categories in your header nav bar
-  Categories:
+  Cates:
   About: /about/index.html
 
 # Article list grouped by year
@@ -23,12 +23,12 @@ thumbnail: true
 scrollLoading: true
 
 # Sidebar
-sidebar: left # sidebar's position (left or right)
+sidebar: right # sidebar's position (left or right)
 social_links:
   twitter:
   facebook:
   google-plus:
-  github: https://github.com/ppoffice/hexo-theme-hueman
+  github: https://github.com/o2team/o2team.github.io
   weibo:
   rss:
 widgets:

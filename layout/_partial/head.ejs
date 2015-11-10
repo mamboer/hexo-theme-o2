@@ -30,12 +30,12 @@
     <link rel="icon" href="<%- theme.favicon %>">
     <% } %>
 
-    <%- css('css/style') %>
+    <%- css('assets/css/style') %>
     <% if (theme.fancybox){ %>
-    <%- css('fancybox/jquery.fancybox') %>
+    <%- css('assets/fancybox/jquery.fancybox') %>
     <% } %>
     <% if (theme.scrollLoading){ %>
-    <%- css('scrollLoading/style') %>
+    <%- css('assets/scrollLoading/style') %>
     <% } %>
 
     <%- partial('google-analytics') %>
@@ -47,10 +47,13 @@
     </style>
     <% } %>
 
-    <% if(theme.use_google_apis) { %>
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-    <% } else { %>
-    <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <% if (page.styles){ %>
+    <style>
+    <%= page.styles %>
+    </style>
     <% } %>
-    <%- css('font-awesome/css/font-awesome.min') %>
+
+    <% if (page.css){ %>
+    <%- css('assets/css/'+ page.css) %>
+    <% } %>
 </head>
