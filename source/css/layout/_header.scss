@@ -17,8 +17,6 @@ body {
     }
 }
 .header {
-    @include vendor('display', 'flex');
-    @include vendor('justify-content', 'space-between');
     background-color: _palette(bg);
     border-bottom: solid 1px _palette(border);
     height: 3.5em;
@@ -28,7 +26,11 @@ body {
     top: 0;
     width: 100%;
     z-index: _misc(z-index-base);
-
+    &-inner {
+        @include vendor('display', 'flex');
+        @include vendor('justify-content', 'space-between');
+        height: 100%;
+    }
     a {
         color: inherit;
         text-decoration: none;
@@ -47,11 +49,16 @@ body {
         height: inherit;
         max-height: 100%;
         line-height: inherit;
-        padding: 0 0 0 1.5em;
+        padding: 0;
+        width: _size(extra-menu-width);
+        text-align:center;
         white-space: nowrap;
 
         a {
             font-size: 0.7em;
+        }
+        @include breakpoint(xxlarge-up) {
+            width: _size(section-spacing) * 1.5;
         }
     }
 
@@ -64,7 +71,6 @@ body {
         border-left: solid 1px _palette(border);
         height: inherit;
         line-height: inherit;
-        margin-left: 1.5em;
         overflow: hidden;
         padding-left: 1.5em;
     }
@@ -125,8 +131,8 @@ body {
                 color: _palette(fg-light);
                 overflow: hidden;
                 position: relative;
-                text-indent: 4em;
-                width: 4em;
+                text-indent: _size(extra-menu-width);
+                width: _size(extra-menu-width);
 
                 &:before {
                     display: block;
@@ -138,6 +144,10 @@ body {
                     text-indent: 0;
                     top: 0;
                     width: inherit;
+                }
+                @include breakpoint(xxlarge-up) {
+                    text-indent: _size(section-spacing) * 1.5;
+                    width: _size(section-spacing) * 1.5;
                 }
             }
         }
@@ -186,10 +196,6 @@ body {
     @include breakpoint(small) {
         height: 2.75em;
         line-height: 2.75em;
-
-        h1 {
-            padding: 0 0 0 1em;
-        }
 
         &-extra {
             .search {

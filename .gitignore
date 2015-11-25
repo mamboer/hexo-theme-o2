@@ -1,7 +1,6 @@
 # Logs
 logs
 *.log
-_config.yml
 # Runtime data
 pids
 *.pid

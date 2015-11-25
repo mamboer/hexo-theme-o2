@@ -5,8 +5,8 @@
     margin: 0 auto;
     max-width: 100%;
     opacity: 1;
-    padding: (_size(section-spacing) * 1.5);
-    width: 90em;
+    padding: (_size(section-spacing) * 1.5) _size(extra-menu-width);
+    width: 100%;
 
     body.is-menu-visible & {
         opacity: 0.15;
@@ -19,9 +19,11 @@
     .page-post-detail & {
         display:block;
     }
-
+    @include breakpoint(xxlarge-up) {
+        padding: (_size(section-spacing) * 1.5);
+    }
     @include breakpoint(xlarge) {
-        padding: _size(section-spacing);
+        padding: _size(section-spacing) _size(extra-menu-width);
     }
 
     @include breakpoint(large) {
