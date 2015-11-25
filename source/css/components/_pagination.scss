@@ -78,6 +78,13 @@
     }
     &-post {
         @include clearfix();
+        &-prev, &-next {
+        	a {
+				white-space: nowrap;
+  				overflow: hidden;
+  				text-overflow: ellipsis; 
+        	}
+		}
         &-prev {
             float:left;
         }
