@@ -26,6 +26,9 @@ body {
     top: 0;
     width: 100%;
     z-index: _misc(z-index-base);
+    .app-fullscreen & {
+        border-top: solid 1px _palette(border);
+    }
     &-inner {
         @include vendor('display', 'flex');
         @include vendor('justify-content', 'space-between');
@@ -50,15 +53,15 @@ body {
         max-height: 100%;
         line-height: inherit;
         padding: 0;
-        width: _size(extra-menu-width);
+        min-width: _size(extra-menu-width);
         text-align:center;
         white-space: nowrap;
 
         a {
-            font-size: 0.7em;
+            font-size: _size(min-font-size);
         }
         @include breakpoint(xxlarge-up) {
-            width: _size(section-spacing) * 1.5;
+            min-width: _size(section-spacing) * 1.5;
         }
     }
 
@@ -79,7 +82,7 @@ body {
         a {
             border-bottom: 0;
             font-family: _font(family-heading);
-            font-size: 0.7em;
+            font-size: _size(min-font-size);
             font-weight: _font(weight-heading);
             letter-spacing: _font(kerning-heading);
             text-transform: uppercase;
@@ -98,7 +101,7 @@ body {
             &.active {
                 a {
                     font-weight: _font(weight-heading-extrabold);
-                    font-size: 0.75em;
+                    font-size: _size(min-font-size) + 0.05em;
                 }
             }
         }

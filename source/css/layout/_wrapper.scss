@@ -33,4 +33,7 @@
     @include breakpoint(small) {
         padding: _size(section-spacing-small);
     }
+    @include breakpoint(xsmall) {
+        padding: _size(section-spacing-xsmall);
+    }
 }

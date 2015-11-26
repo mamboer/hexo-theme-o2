@@ -16,6 +16,11 @@
 			$sidebar = $('#sidebar'),
 			$main = $('#main');
 
+        // app full screen mode
+        if ("standalone" in window.navigator && window.navigator.standalone) {
+            $body.addClass('app-fullscreen'); 
+        }
+
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
 

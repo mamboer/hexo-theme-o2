@@ -1,5 +1,5 @@
 <!-- Scripts -->
-<!-- build:js js/dist.main.js -->
+<!-- build:js js/dist.o2.js -->
 {{ js('js/lunr') }}
 {{ js('js/debounce') }}
 {{ js('js/jquery') }}
@@ -13,14 +13,11 @@
 {{ js('js/util') }}
 {{ js('js/main') }}
 {{ js('js/search') }}
-<!-- endbuild -->
-
 {% if theme.fancybox %}
-<!-- build:js js/dist.fancybox.js -->
 {{ js('assets/fancybox/jquery.fancybox') }}
 {{ js('js/fancybox') }}
-<!-- endbuild -->
 {% endif %}
+<!-- endbuild -->
 
 {% if page.comments and theme.duoshuo.shortname and theme.duoshuo.ua_enable %}
 <!-- build:js js/dist.duoshuo.js -->

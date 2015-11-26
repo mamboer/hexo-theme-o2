@@ -16,6 +16,10 @@
     @include breakpoint(small) {
         margin:0 5px;
     }
+    @include breakpoint(xsmall) {
+        margin:0 10px 0 0;
+        padding: 0 1.5em;
+    }
 }
 .pagination {
     
@@ -27,6 +31,10 @@
         @include pager-item    
         @include breakpoint(small) {
             margin:0 5px;
+        }
+        @include breakpoint(xsmall) {
+            margin:0 10px 0 0;
+            padding: 0 1.5em;
         }
     }
 

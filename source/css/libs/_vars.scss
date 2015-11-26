@@ -11,10 +11,12 @@
 
 // Size.
 	$size: (
-		element-height:				2.75em,
+		min-font-size:              0.8em,
+        element-height:				2.75em,
 		element-margin:				2em,
 		section-spacing:			3em,
 		section-spacing-small:		1.5em,
+		section-spacing-xsmall:		1.2em,
 		menu:						25em,
         extra-menu-width:           4em
 	);

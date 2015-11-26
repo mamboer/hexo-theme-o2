@@ -62,8 +62,12 @@ em, i {
 
 p {
     margin: 0 0 _size(element-margin) 0;
+    word-break: break-all;
+    @include breakpoint(small) {
+        margin: 0 0 (_size(element-margin) * 3/4) 0;
+    }
     li >& {
-        margin-bottom: 0;
+        margin-bottom: 5px;
     }
 }
 
@@ -83,33 +87,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 h3 {
-    font-size: 0.9em;
+    font-size: 1.0em;
 }
 
 h4 {
-    font-size: 0.7em;
+    font-size: 0.85em;
 }
 
 h5 {
-    font-size: 0.7em;
+    font-size: _size(min-font-size);
 }
 
 h6 {
-    font-size: 0.7em;
+    font-size: _size(min-font-size);
 }
 
 sub {
-    font-size: 0.8em;
+    font-size: _size(min-font-size);
     position: relative;
     top: 0.5em;
 }
 
 sup {
-    font-size: 0.8em;
+    font-size: _size(min-font-size);
     position: relative;
     top: -0.5em;
 }
@@ -121,6 +125,10 @@ blockquote {
     padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4) _size(element-margin);
     > p {
         margin-bottom: 0;  
+    }
+
+    @include breakpoint(small) {
+        padding-left: _size(element-margin) / 2;
     }
 }
 

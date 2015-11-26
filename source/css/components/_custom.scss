@@ -18,3 +18,12 @@
         }
     }
 }
+
+.highlight {
+    @include breakpoint(small) {
+        padding: 15px 10px;
+        .gutter pre {
+            padding-right: 10px;
+        }
+    }
+}

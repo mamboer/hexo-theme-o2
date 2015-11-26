@@ -24,7 +24,7 @@
 <meta name="msapplication-TileColor" content="#2f83cd">
 <meta name="msapplication-TileImage" content="{{ url_for('img/mstile-144x144.png') }}">
 <!-- CSS -->
-<!-- build:css css/dist.style.css -->
+<!-- build:css css/dist.o2.css -->
 {{ css('css/o2') }}
 <!-- endbuild -->
 {% if theme.fancybox %}

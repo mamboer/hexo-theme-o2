@@ -7,8 +7,11 @@
 @import 'libs/functions';
 @import 'libs/mixins';
 @import 'libs/skel';
-@import 'FontAwesome/font-awesome';
+@import '_FontAwesome/font-awesome';
 @import 'components/fonts';
+// 3Party Libs
+@import 'highlight/tomorrow';
+
 // Base.
 
 @import 'base/breakpoints';
@@ -40,8 +43,6 @@
 @import 'components/duoshuo';
 }
 
-// 3Party Libs
-@import 'highlight/tomorrow';
 
 // Layout.
 

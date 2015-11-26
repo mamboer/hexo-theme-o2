@@ -10,9 +10,6 @@
                 {% endfor %} 
                 {% endif %}
                 <li title="{{ __("post.word_count") }}"><span class="icon fa-font" itemprop="wordCount">{{ wordcount(post.content) }}</span></li>
-                {% if theme.busuanzi %}
-                <li id="busuanzi_container_page_pv" title="{{ __("post.pv") }}"><span class="icon fa-eye" id="busuanzi_value_page_pv">0</span></li>
-                {% endif %}
             </ul>   
             {% if post.subtitle %}
             <p itemprop="description" class="post-desc">{{ post.subtitle }}</p>
@@ -36,9 +33,6 @@
             {% endfor %} 
             {% endif %}
             <li title="{{ __("post.word_count") }}"><span class="icon fa-font" itemprop="wordCount">{{ wordcount(post.content) }}</span></li>
-            {% if theme.busuanzi %}
-			<li id="busuanzi_container_page_pv" title="{{ __("post.pv") }}"><span class="icon fa-eye" id="busuanzi_value_page_pv">0</span></li>
-        	{% endif %}
 		</ul>
     </footer>
 </article>

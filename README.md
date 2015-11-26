@@ -1,84 +1,189 @@
-> #### This theme is ported from [AlxMedia](https://github.com/AlxMedia)'s the WordPress theme [Hueman](https://github.com/AlxMedia/hueman).
-> #### If you like Hueman, don't forget to 'Star' the project and share it with your friends! :）
+> This theme is inspired by the [`Future Imperfect`](http://html5up.net/future-imperfect) responsive HTML5 template.
 
-# Hueman
-### Probably the most beautiful theme for Hexo. [Preview](http://ppoffice.github.io/hexo-theme-hueman/)
-![](http://ppoffice.github.io/hexo-theme-hueman/gallery/preview.jpg "")
+# O2
 
-##### Special thanks to [AlxMedia](https://github.com/AlxMedia), who designed the original theme [Hueman](https://github.com/AlxMedia/hueman) for wordpress.
+The most beautiful theme for Hexo, flat and delicate, created and maintained by [AOTU Labs](http://aotu.io). 
+
+[Preview](http://aotu.io/)
+
+![o2](http://aotu.io/img/post/mamboer/o2.jpg "aotu.io")
 
 ## Installation
 
 ### Install
 
 ``` bash
-$ git clone https://github.com/ppoffice/hexo-theme-hueman.git themes/hueman
+$ git clone https://github.com/o2team/hexo-theme-o2.git themes/o2
 ```
 
-**Hueman requires Hexo 3.0.0-rc.4 and above.**
-**Old version of Hueman can be found in branch-2.x.**
+**Hueman requires Hexo 3.0.0 and above.**
 
 ### Enable
 
-Modify `theme` setting in `_config.yml` to `hueman`.
+Modify `theme` setting in `_config.yml` to `o2`.
 
 ### Update
 
 ``` bash
-cd themes/hueman
+cd themes/o2
 git pull
 ```
 
-## Configuration
+## Features
 
-``` yml
-# Header
-menu:
-  Home: /
-  Categories:
-  About: /about/index.html
+### Daily words
 
-# Content
-fancybox: true
+Display an aphoristic sentence randomly at `index.html`.
 
-# Thumbnail
-thumbnail: true
+In o2 theme's configration:
 
-# Scroll Loading
-scrollLoading: true
-
-# Sidebar
-social_links:
-  twitter:
-  facebook:
-  google_plus:
-  weibo:
-  rss:
-widgets:
-- recent_posts
-- category
-- archive
-- tag
-- tagcloud
-- links
-
-# Links
-links:
-  Hexo: http://hexo.io
-
-# Miscellaneous
-google_analytics:
-favicon: /favicon.png
+```yml
+daily_word: true
 ```
 
-- **menu** - Navigation menu. Add '**Categories**' to display categories on the menu, the maximum depth of categories menus is 2 (You don't have to set the value of 'Categories').
-- **fancybox** - Enable [Fancybox].
-- **thumbnail** - Enable thumbnail images in index pages (Home, Category, Archive, Tag).
-- **social_links** - Your social network links, RSS link, etc.
-- **widgets** - Widgets displayed in sidebar.
-- **links** - Links displayed in the link widget.
-- **google_analytics** - Google Analytics ID.
-- **favicon** - Favicon path.
+> Place your words into the `_data` folder of your hexo site.
+
+See the example [aphoristic sentence json data](https://github.com/o2team/o2team.github.io/blob/hexo/source/_data/words.json)
+
+### Disqus
+
+In your hexo site's configuration (not the theme's configuration).
+
+```yml
+# disqus
+disqus_shortname: "your disqus shortname"
+```
+
+### Duoshuo
+
+`Duoshuo` is a comment system specially for Chinese.
+
+In o2 theme's configuration:
+
+```yml
+# Make duoshuo show UA
+# user_id must NOT be null when admin_enable is true!
+# you can visit http://dev.duoshuo.com get duoshuo user id.
+duoshuo:
+  shortname: aotu
+  ua_enable: true
+  admin_enable: false
+  user_id: 0
+  #admin_nickname: ROOT
+```
+
+### Google Analytics
+
+In your hexo site's configuration,
+
+```yml
+google_analytics: "your GA ID"
+```
+
+### Baidu Analytics
+
+For Chinese, in your hexo site's configuration,
+
+```
+baidu_analytics: "your BA ID"
+```
+
+### busuanzi
+
+`busuanzi` is a lighweight analytics plugin, use it to display `pv` and `uv` on every post.
+
+In o2 theme's configuration,
+
+```yml
+busuanzi: true
+```
+
+### Code highlight theme
+
+In o2 theme's configuration,
+
+```yml
+# Code Highlight theme
+# Available value:
+#    normal | night | eighties | blue | bright
+# https://github.com/chriskempson/tomorrow-theme
+highlight_theme: normal
+```
+
+### Custom Logo
+
+In o2 theme's configuration, you can specify your own logo picture.
+
+```yml
+logo:
+    url: img/logo-square-120.png
+```
+
+### Custom Post Cover and Post Asset Folder
+
+In o2 theme's configuration,
+
+```yml
+post:
+    cover: post-default.png
+    img_dir: img/post/
+```
+
+### Fancybox
+
+O2 uses [Fancybox] to showcase your photos in your posts. 
+
+```
+![img caption](img url)
+```
+
+### Custom Tag - `pimg`
+
+`pimg` means `post image`, it's a custom tag for you inserting your post's content image quickly.
+To use 'pimg', you should put your images into the folder defined in `post.img_dir`.
+
+```
+{% pimg imageName [alt text] [JSONImageAttibutes] %}
+```
+
+Note: Don't use space charaters in the `alt text` field, replace any space charaters with `%20` if you have to.
+
+For example,
+
+```
+{% pimg post-aotu.jpg "An%20Sentence%20WithSpace" '{"title":"hello","class":"test_img"}' %}
+```
+
+### Custom Tag - 'tag_cfg'
+
+`tag_cfg` let your access to your site's configuration in your posts.
+
+For example, we can insert the config's description field into a post.
+
+```
+{% tag_cfg description %}
+```
+
+### Menu
+
+Place your menu data into the `_data` folder of your hexo site.
+
+[Example menu data](https://github.com/o2team/o2team.github.io/blob/hexo/source/_data/menu.yml)
+
+### Lunr (O2 Specially)
+
+O2 uses the 'hexo-generator-lunr' plugin to implement client-side full text search.
+
+In your hexo site's configuration,
+
+```yml
+# lunr
+lunr:
+  field: all
+  path: assets/lunr/
+```
+
+For more details about [hexo-generator-lunr](o2team/hexo-generator-lunr)
 
 ## Languages
 
@@ -88,66 +193,14 @@ English and Simplified Chinese are the default languages of the theme. You can a
 language: zh-CN
 ```
 
-## Features
-
-### Responsive Layout
-
-Hueman knows on what screen size you are browsering the website, and reorganize the layout to fit your device.
-
-![](http://ppoffice.github.io/hexo-theme-hueman/gallery/responsive.jpg "")
-
-### Categories inside Main Menu
-
-Hueman inserts your blog categories into main menu in the header section. You can enable/disable this feature in `menu` setting.
-
-![](http://ppoffice.github.io/hexo-theme-hueman/gallery/main-menu.jpg "")
-
-### Thumbnail
-
-Hueman finds the first image in every post as the thumbnail for the post. If the post does not contain a image link, Hueman uses the default thumbnail image. You can enable/disable this feature in `thumbnail` setting.
-
-![](http://ppoffice.github.io/hexo-theme-hueman/gallery/thumbnail.jpg "")
-
-### Scroll Loading
-
-Scroll loading means you don't have to load all the images the second you opened the blog. When you scroll down, the plugin make images inside your vision loaded automatically. You can enable/disable this feature in `scrollLoading` setting.
-
-### Fancybox
-
-Hueman uses [Fancybox] to showcase your photos. You can use Markdown syntax or fancybox tag plugin to add your photos.
-
-```
-![img caption](img url)
-```
-
-### Sidebar
-
-Hueman provides 6 built-in widgets:
-
-- recent_posts
-- category
-- archives
-- tag
-- tagcloud
-- links
-
-All of them are enabled by default. You can edit them in `widget` setting.
-
 ## Development
 
 ### Requirements
 
-- [Grunt] 0.4+
 - Hexo 3.0+
 
-### Grunt tasks
 
-- **default** - Download [Fancybox] and [Font Awesome].
-- **fontawesome** - Only download [Font Awesome].
-- **fancybox** - Only download [Fancybox].
-- **clean** - Clean temporarily files and downloaded files.
-
-[Hexo]: http://zespia.tw/hexo/
+[Hexo]: http://hexo.io/
 [Fancybox]: http://fancyapps.com/fancybox/
 [Font Awesome]: http://fontawesome.io/
-[Grunt]: http://gruntjs.com/
+[Aotu.io]: http://aotu.io/
