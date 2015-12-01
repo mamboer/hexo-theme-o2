@@ -11,6 +11,9 @@ layout:
 # busuanzi
 busuanzi: true
 
+# baidu push
+baidu_push: true
+
 # dict daily
 ## http://dict.cn/foot/help2.htm
 dict_daily: false
