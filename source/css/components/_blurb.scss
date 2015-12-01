@@ -1,6 +1,6 @@
 .blurb {
     h2 {
-        font-size: 0.8em;
+        font-size: 0.9em;
         margin: 0 0 (_size(element-margin) * 0.75) 0;
         .dark & {
             color: _palette(fg-light);
@@ -8,7 +8,7 @@
     }
 
     h3 {
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
 
     p {

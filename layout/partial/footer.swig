@@ -1,8 +1,8 @@
 <footer id="footer" class="footer">
     <ul class="icons">
         <li><a href="https://twitter.com/{{ config.twitter }}" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="{{ url_for('atom.xml') }}" class="footer-link fa-rss"><span class="label">RSS</span></a></li>
         <li><a href="https://github.com/{{ config.github.user }}/{{ config.github.repo }}" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a></li>
-        <li><a href="{{ url_for('atom.xml') }}" class="fa-rss"><span class="label">RSS</span></a></li>
     </ul>
     <div class="copyright">
       &copy; {{ moment(Date.now()).year() }} <a href="http://aotu.io" target="_blank">{{ config.author }}</a><br>

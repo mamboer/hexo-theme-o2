@@ -1,12 +1,15 @@
 .footer {
     .icons {
         color: _palette(fg-light);
+        li:nth-child(3){
+            color: _palette(pink);
+        }
     }
 
     .copyright, .site-stats {
         color: _palette(fg-light);
         font-family: _font(family-heading);
-        font-size: 0.5em;
+        font-size: 0.6em;
         font-weight: _font(weight-heading);
         letter-spacing: _font(kerning-heading);
         text-transform: uppercase;
