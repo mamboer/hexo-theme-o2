@@ -9,6 +9,9 @@
     display:none;
 	box-shadow: inset 0 0 0 1px _palette(border);
     color: _palette(fg-bold);
+    .dark & {
+        color: _palette(fg-light);
+    }
 	cursor: pointer;
 	transform: translateZ(0);
     @include vendor('transition', (

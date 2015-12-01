@@ -17,7 +17,7 @@ body {
 
 body {
     background: _palette(bg-alt);
-
+	transition: background ease 1s;
     // Prevents animation/transition "flicker" on page load.
     // Automatically added/removed by js/main.js.
         &.is-loading {
@@ -27,4 +27,7 @@ body {
             }
         }
 
+    &.dark {
+        background: _palette(bg-dark);
+    }
 }

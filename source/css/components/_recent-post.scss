@@ -43,6 +43,9 @@
         h3 {
             font-size: 0.7em;
             margin-top: 0.125em;
+            .dark .sidebar & {
+                color: _palette(fg-light);
+            }
         }
 
         .published {

@@ -29,7 +29,7 @@
     <!-- Actions -->
     <section>
         <ul class="actions vertical">
-            <li><a href="https://github.com/{{ config.github.user }}" class="button big fit"><i class="fa fa-github"></i>Github</a></li>
+            <li><a href="javascript:;" class="button big fit" data-dark="{{ __('site.theme_dark') }}" data-light="{{ __('site.theme_light') }}" id="themeSwitcher"><i class="fa fa-paint-brush"></i><span class="theme-title" id="themeTitle">{{__('site.theme_dark')}}</span></a></li>
         </ul>
     </section>
 </section>

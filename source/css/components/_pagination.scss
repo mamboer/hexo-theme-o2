@@ -9,6 +9,10 @@
     color: _palette(fg-bold);
     font-family: _font(family-heading);
     border: 0;
+
+    .dark & {
+        color: _palette(fg-light);
+    }
 }
 
 .page-number-basic {

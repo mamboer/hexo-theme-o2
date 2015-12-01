@@ -9,7 +9,7 @@
                     <h3 class="recent-post-title"><a href="{{ url_for(post.path) }}" itempro="name">{{ post.title }}</a></h3>
                     <time class="published" datetime="{{ date_xml(post.date) }}" itempro="datePublished">{{ date(post.date) }}</time>
                 </header>
-                <a href="{{ url_for(post.path) }}" class="image recent-post-cover"><img src="{{ post_img( post.cover|default(theme.post.cover) ) }}" alt="{{ post.title }}" /></a>
+                <a href="{{ url_for(post.path) }}" class="image recent-post-cover" title="{{ post.title }}" style="background-image:url({{ post_img(post.cover|default(theme.post.cover)) }})"></a>
             </article>
         </li>
         {% endfor %}

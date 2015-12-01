@@ -22,6 +22,8 @@ site:
   pv_unit: Hits
   uv: Total UV
   uv_unit: Hits
+  theme_dark: Hades's Dark
+  theme_light: Loulan's Light
 
 post:
   contents: Contents

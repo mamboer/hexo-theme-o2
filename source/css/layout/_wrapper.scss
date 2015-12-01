@@ -22,6 +22,13 @@
     @include breakpoint(xxlarge-up) {
         padding: (_size(section-spacing) * 1.5);
     }
+    @include breakpoint(xlarge-up) {
+    	max-width: 1680px;
+		.header-inner {
+			max-width: 1680px;
+			margin: 0 auto;
+		}
+	}
     @include breakpoint(xlarge) {
         padding: _size(section-spacing) _size(extra-menu-width);
     }
@@ -29,7 +36,9 @@
     @include breakpoint(large) {
         display: block;
     }
-
+	@include breakpoint(medium) {
+        padding: _size(section-spacing);
+	}
     @include breakpoint(small) {
         padding: _size(section-spacing-small);
     }

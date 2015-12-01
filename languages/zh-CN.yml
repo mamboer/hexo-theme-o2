@@ -22,6 +22,8 @@ site:
   pv_unit: 次
   uv: 总访客数
   uv_unit: 人
+  theme_dark: 哈迪斯的暗黑
+  theme_light: 楼兰的光明
 
 post:
   contents: 目录

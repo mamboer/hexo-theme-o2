@@ -103,3 +103,27 @@ hexo.extend.helper.register('post_key', function(path){
     path = new Buffer(path).toString('base64');
     return path;
 });
+
+/**
+ * filter feature posts
+ */
+hexo.extend.helper.register('process_posts', function(obj){
+    if (obj.o2posts) {
+        return obj.o2posts;    
+    }
+    var items = obj.posts,
+        items1 = [],
+        items2 = [];
+    items.each(function(post){
+        if (post.sticky) {
+            items1.push(post);    
+        } else {
+            items2.push(post);           
+        }
+    });
+
+    obj.o2posts = items1.concat(items2);
+    items1 = null;
+    items2 = null;
+    return obj.o2posts;
+});

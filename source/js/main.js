@@ -129,6 +129,40 @@
             return false;
         });
 
+        // Theme switcher
+        var ts = {
+            ls: localStorage || {getItem:function(){}, setItem:function(){}},
+            key: 'o2.theme',
+            theme: 'light',
+            init: function(){
+                var theme = this.ls.getItem(this.key) || this.theme;
+                this.$title = $('#themeTitle');
+                this.$btn = $('#themeSwitcher').on('click',function(e){
+                    if(theme === 'dark'){
+                        theme = 'light';
+                    } else {
+                        theme = 'dark';
+                    }
+                    ts.setTheme(theme);
+                    return false;
+                });
+                this.$btn.dark = this.$btn.attr('data-dark');
+                this.$btn.light = this.$btn.attr('data-light');
+                this.setTheme(theme);
+            },
+            setTheme:function(theme){
+                var reverse = {
+                    dark: 'light',
+                    light: 'dark'
+                };
+                this.theme = theme;
+                this.ls.setItem(this.key, theme);
+                $body.removeClass('dark light').addClass(theme);
+                this.$title.html(this.$btn[reverse[theme]]);
+            }
+        };
+        ts.init();
+
 	});
 
 })(jQuery);

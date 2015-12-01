@@ -39,6 +39,7 @@
 	$palette: (
 		bg:							#ffffff,
 		bg-alt:						#f4f4f4,
+		bg-dark:				    #23232e,
 		fg:							#646464,
 		fg-bold:					#3c3b3b,
 		fg-light:					#aaaaaa,
@@ -46,7 +47,11 @@
 		border-bg:					rgba(160,160,160,0.075),
 		border-alt:					rgba(160,160,160,0.65),
 		accent:						#2ebaae,
-        highlight:                  rgba(240,114,125,0.5)
+        highlight:                  rgba(240,114,125,0.5),
+		//http://www.colourlovers.com/palette/932683/Compatible?widths=0
+		heel:						#FF3D7F,//rgb(255,61,127)
+		pink:						#FF9E9D,//rgb(255,158,157)
+		mud:						#DAD8A7//rgb(218,216,167)
 	);
 
 // Code block

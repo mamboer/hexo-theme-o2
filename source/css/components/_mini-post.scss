@@ -28,7 +28,10 @@
         @include vendor('flex-grow', '1');
 
         h3 {
-            font-size: 0.7em;
+            font-size: _size(min-font-size);
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden; 
         }
 
         .published {
@@ -52,6 +55,11 @@
 .mini-posts {
     margin: 0 0 _size(element-margin) 0;
 
+    @include breakpoint(large-up) {
+        .pagination {
+            display: none;
+        }
+    }
     @include breakpoint(large) {
         @include vendor('display', 'flex');
         @include vendor('flex-wrap', 'wrap');
@@ -64,11 +72,6 @@
 
         > :nth-child(-n + 2) {
             margin-top: 0;
-        }
-    }
-    @include breakpoint(large-up) {
-        .pagination {
-            display: none;
         }
     }
     @include breakpoint(small-up) {

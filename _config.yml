@@ -5,6 +5,9 @@ post:
     cover: post-default.png
     img_dir: img/post/
 
+layout:
+    feature_count: 4
+
 # busuanzi
 busuanzi: true
 
