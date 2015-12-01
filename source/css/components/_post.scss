@@ -11,6 +11,7 @@
     }
     img {
         max-width: 100%;
+        vertical-align: top;
     }
     &-title {
         @include vendor('flex-grow', '1');

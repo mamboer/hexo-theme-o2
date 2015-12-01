@@ -42,7 +42,7 @@ hexo.extend.tag.register('pimg', function(args,content){
         imgAttr[p] = imgAttr[p].replace(/\%20/g, ' ');
     }
 
-    return util.htmlTag('img', imgAttr);
+    return ('<p class="user_img">' + util.htmlTag('img', imgAttr) + '</p>');
 });
 
 hexo.extend.tag.register('tag_cfg', function(args, content){
