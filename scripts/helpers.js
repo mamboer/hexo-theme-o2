@@ -95,3 +95,11 @@ hexo.extend.helper.register('page_keywords', function(asStr){
     }
     return siteKeywords;
 });
+
+/**
+ * post unique key
+ */
+hexo.extend.helper.register('post_key', function(path){
+    path = new Buffer(path).toString('base64');
+    return path;
+});

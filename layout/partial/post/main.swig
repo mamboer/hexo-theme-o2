@@ -16,7 +16,7 @@
                 {% if page.comments and theme.duoshuo.shortname %}
                 <li>
                     <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl" class="lnk-comments">
-                        <span class="post-comments-count ds-thread-count icon fa-comments" data-thread-key="{{ url }}" data-count-type="comments" itemprop="commentsCount">0</span>
+                        <span class="post-comments-count ds-thread-count icon fa-comments" data-thread-key="{{ post_key(post.path) }}" data-count-type="comments" itemprop="commentsCount">0</span>
                     </a>
                 </li>
                 {% endif %} 
