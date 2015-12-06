@@ -15,9 +15,3 @@
     xsmall: '(max-width: 480px)',
     xsmall-up: '(min-width: 481px)'
 ));
-
-@include skel-layout((
-    reset: 'full',
-    boxModel: 'border',
-    grid: ( gutters: 1em )
-));

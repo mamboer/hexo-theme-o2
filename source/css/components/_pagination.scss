@@ -26,13 +26,13 @@
     }
 }
 .pagination {
-    
+
     margin: 0px 0 20px;
     .prev,
     .next,
     .page-number,
     .space {
-        @include pager-item    
+        @include pager-item
         @include breakpoint(small) {
             margin:0 5px;
         }
@@ -46,7 +46,7 @@
         &:first-child {
             margin-left: 0;
         }
-    }   
+    }
 
     .prev,
     .next,
@@ -90,11 +90,12 @@
     }
     &-post {
         @include clearfix();
+        display: block;
         &-prev, &-next {
         	a {
 				white-space: nowrap;
   				overflow: hidden;
-  				text-overflow: ellipsis; 
+  				text-overflow: ellipsis;
         	}
 		}
         &-prev {
@@ -102,6 +103,6 @@
         }
         &-next {
             float:right;
-        } 
+        }
     }
 }

@@ -18,7 +18,8 @@
 		section-spacing-small:		1.5em,
 		section-spacing-xsmall:		1.2em,
 		menu:						25em,
-        extra-menu-width:           4em
+        extra-menu-width:           4em,
+		max-width:  				1680px
 	);
 
 // Font.
@@ -40,6 +41,7 @@
 		bg:							#ffffff,
 		bg-alt:						#f4f4f4,
 		bg-dark:				    #23232e,
+		bg-primary:					#6190e8,
 		fg:							#646464,
 		fg-bold:					#3c3b3b,
 		fg-light:					#aaaaaa,
