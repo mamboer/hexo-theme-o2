@@ -5,7 +5,15 @@
             color: _palette(pink);
         }
     }
-
+    &-link {
+        width:32px;
+        height:32px;
+        line-height:32px;
+        text-align: center;
+        display: inline-block;
+        background-color: #fff;
+        border-radius: 50%;
+    }
     .copyright, .site-stats {
         color: _palette(fg-light);
         font-family: _font(family-heading);

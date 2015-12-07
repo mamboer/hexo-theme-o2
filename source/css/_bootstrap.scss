@@ -5,8 +5,7 @@
  */
 
 // Core variables and mixins
-//@import "bootstrap/variables";
-@import "bootswatch/cosmo/variables";
+@import "bootswatch/cosmo/variables";//O2!
 @import "bootstrap/mixins";
 
 // Reset and dependencies
@@ -57,4 +56,4 @@
 @import "bootstrap/responsive-utilities";
 
 // Bootswatch
-@import "bootswatch/cosmo/bootswatch";
+@import "bootswatch/cosmo/bootswatch";//O2!

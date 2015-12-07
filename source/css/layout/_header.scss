@@ -1,22 +1,101 @@
 body {
     padding-top: 3.5em;
 }
-.logo {
-    &-wrap {
-       position:relative;
-    }
-    height: 58%;
-    display:inline-block;
-    position:relative;
-    top:50%;
-    transform:translateY(-50%);
+.navbar-brand {
+    padding-top: ($navbar-height - $logo-height)/2; 
     vertical-align: top;
     img {
-        height:100%;
-        vertical-align: top;
+        height: $logo-height;
+    }
+}
+@mixin header-anchor {
+    >li >a {
+        &:hover,&:focus {
+            color: _palette(accent);
+            background-color: transparent;
+        }
     }
 }
 .header {
+    background-color: _palette(bg);
+    border-bottom: solid 1px _palette(border);
+    z-index: _misc(z-index-base);
+    .app-fullscreen & {
+        border-top: solid 1px _palette(border);
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+        border: none;
+    }
+    form {
+        margin: 0;
+
+        input {
+            display: inline-block;
+            height: 2.5em;
+            position: relative;
+            top: -2px;
+            vertical-align: middle;
+        }
+    }
+    
+    &-links {
+        margin-left: 1.5em;
+        @include header-anchor();
+        .open >a {
+            color: _palette(accent);
+            &:hover, &:focus {
+                color: _palette(accent);
+            }
+        }
+        .active {
+            a {
+                &:after {
+                    position:absolute;
+                    content:' ';
+                    bottom: 0;
+                    left: 0;
+                    height:2px;
+                    width: 100%;
+                    background-color: _palette(bg-primary);
+                }
+            }
+        }
+        &-extra {
+            margin-left: 0;
+        }
+    } 
+}
+.search {
+    &-icon {
+        float:left;
+    } 
+    &-form {
+        @include vendor('transition', 'all 0.5s ease');
+        float:left;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0;
+        white-space: nowrap;
+
+        input {
+            width: 12em;
+            &.error {
+                box-shadow:none !important;
+                border-color: _palette(highlight);
+            }
+        }
+
+        &.visible {
+            max-width: 12.5em;
+            opacity: 1;
+            padding: 0 0.5em 0 0;
+        }
+    }
+}
+.header1 {
     background-color: _palette(bg);
     border-bottom: solid 1px _palette(border);
     height: 3.5em;
@@ -155,40 +234,7 @@ body {
             }
         }
     }
-    form {
-        margin: 0;
-
-        input {
-            display: inline-block;
-            height: 2.5em;
-            position: relative;
-            top: -2px;
-            vertical-align: middle;
-        }
-    }
-
-    #search {
-        @include vendor('transition', 'all 0.5s ease');
-        max-width: 0;
-        opacity: 0;
-        overflow: hidden;
-        padding: 0;
-        white-space: nowrap;
-
-        input {
-            width: 12em;
-            &.error {
-                box-shadow:none !important;
-                border-color: _palette(highlight);
-            }
-        }
-
-        &.visible {
-            max-width: 12.5em;
-            opacity: 1;
-            padding: 0 0.5em 0 0;
-        }
-    }
+    
 
     @include breakpoint(medium) {
         &-main {

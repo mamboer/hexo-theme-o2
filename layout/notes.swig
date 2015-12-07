@@ -3,12 +3,14 @@
 {% block page_class %}page-index{% endblock %}
 
 {% block main %}
+<div id="wrapper" class="root">
 <div id="main" class="main">
 
 {% include 'partial/index/feature_posts.swig' %}
 
 {% include 'partial/pagination.swig' %}
 
+</div>
 </div>
 
 <section id="sidebar" class="sidebar">

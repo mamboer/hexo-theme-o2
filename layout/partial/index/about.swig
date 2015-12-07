@@ -1,7 +1,13 @@
-<section class="blurb">
-    <h2>{{ __('menu.about') }}</h2>
-    <p>{{ config.description }}</p>
-    <ul class="actions">
-        <li><a href="{{ url_for('about/') }}" class="button">{{ __('button.learn_more') }}</a></li>
-    </ul>
-</section>
+<div class="sec sec-about">
+    <div class="sec-bg sec-bg1"></div>
+    <div class="sec-bg sec-bg2"></div>
+    <div class="container sec-heading">
+        <div class="row">
+            <h2 class="sec-heading-main">{{ __('site.about_us') }}</h2>
+            <p class="sec-heading-sub">{{ config.description }}</p>
+            <ul class="actions about-actions">
+                <li><a href="{{ url_for('about/') }}" class="button">{{ __('button.learn_more') }}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -10,6 +10,7 @@ menu:
   aotu_labs: 凹凸实验室
   about: 关于
   home: 首页
+  source: 源码
 
 button:
   learn_more: 了解详情 
@@ -22,8 +23,10 @@ site:
   pv_unit: 次
   uv: 总访客数
   uv_unit: 人
-  theme_dark: 哈迪斯的暗黑
-  theme_light: 楼兰的光明
+  theme_dark: 暗影猎手
+  theme_light: 曙光女神
+  about_us: 关于我们
+  follow_us: 关注我们
 
 post:
   contents: 目录

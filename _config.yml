@@ -39,3 +39,7 @@ duoshuo:
   admin_enable: false
   user_id: 0
   #admin_nickname: ROOT
+
+# Wechat
+wechat:
+  desc: 无折腾不为乐 - 我们爱生活，爱设计，爱技术，爱创作，喜欢闹腾。

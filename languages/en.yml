@@ -10,6 +10,7 @@ menu:
   aotu_labs: AOTU Labs 
   about: About
   home: Home
+  source: Source
 
 button:
   learn_more: Learn More
@@ -24,6 +25,8 @@ site:
   uv_unit: Hits
   theme_dark: Hades's Dark
   theme_light: Loulan's Light
+  about_us: About US
+  follow_us: Follow US
 
 post:
   contents: Contents
