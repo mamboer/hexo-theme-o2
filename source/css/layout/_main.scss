@@ -2,4 +2,15 @@
     @include vendor('flex-grow', '1');
     -ms-flex: 1;
     width: 100%;
+    &-widget {
+        //border: 1px solid _palette(border);
+        margin-bottom: _size(section-spacing);
+        padding: _size(section-spacing-xsmall) 0;
+        h2 {
+            font-size: _size(min-font-size);
+        }
+        &-hd {
+            margin: 0 0 _size(element-margin) 0;
+        }
+    }
 }

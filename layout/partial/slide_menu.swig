@@ -12,19 +12,6 @@
         {{ header_menu('main-nav') }}
         </ul>
     </section>
-    <!-- Links -->
-    <section>
-        <ul class="links">
-            {% for item in site.data.links %}
-            <li>
-                <a href="{{ item.link }}">
-                    <h3>{{ item.name }}</h3>
-                    <p>{{ item.desc }}</p>
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
-    </section>
 
     <!-- Actions -->
     <section>

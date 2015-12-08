@@ -1,5 +1,5 @@
 body {
-    padding-top: 3.5em;
+    padding-top: $navbar-height;
 }
 .navbar-brand {
     padding-top: ($navbar-height - $logo-height)/2; 
@@ -17,8 +17,11 @@ body {
     }
 }
 .header {
+    margin-bottom: 0;
+    border-bottom: 0;
+    box-shadow: 0 1px 4px _palette(bg-primary);
     background-color: _palette(bg);
-    border-bottom: solid 1px _palette(border);
+    //border-bottom: solid 1px _palette(border);
     z-index: _misc(z-index-base);
     .app-fullscreen & {
         border-top: solid 1px _palette(border);

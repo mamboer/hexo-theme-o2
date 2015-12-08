@@ -1,0 +1,44 @@
+.favlinks-list {
+    list-style: none;
+    padding: 0;
+
+    > li {
+        border: 0;
+        border-top: dotted 1px _palette(border);
+        margin: 1.5em 0 0 0;
+        padding: 1.5em 0 0 0;
+
+        a {
+            display: block;
+            border-bottom: 0;
+
+            h3 {
+                @include vendor('transition', 'color #{_duration(transition)} ease');
+                font-size: 0.7em;
+            }
+
+            p {
+                font-family: _font(family-heading);
+                font-size: 0.6em;
+                font-weight: _font(weight-heading);
+                letter-spacing: _font(kerning-heading);
+                letter-spacing: _size(letter-spacing-alt);
+                margin-bottom: 0;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            &:hover {
+                h3 {
+                    color: _palette(accent);
+                }
+            }
+        }
+
+        &:first-child {
+            border-top: 0;
+            margin-top: 0;
+            padding-top: 0;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 // referenced in index and archive
 
-.recent-posts {
+.tiny-posts {
     list-style: none;
     padding: 0;
 
@@ -17,7 +17,7 @@
     }
 }
 
-.recent-post {
+.tiny-post {
     @include vendor('display', 'flex');
     @include vendor('align-items', 'flex-start');
     @include vendor('flex-direction', 'row-reverse');

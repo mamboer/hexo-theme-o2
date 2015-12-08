@@ -1,17 +1,37 @@
+@mixin root-padding {
+    padding-left: _size(section-spacing-xsmall);
+    padding-right: _size(section-spacing-xsmall);
+    padding-top: (_size(section-spacing) * 1.5);
+    padding-bottom: (_size(section-spacing) * 1.5);
+    @include breakpoint(xxlarge-up) {
+        padding-top: (_size(section-spacing) * 1.5);
+        padding-bottom: (_size(section-spacing) * 1.5);
+    }
+    @include breakpoint(xlarge) {
+        padding-top: _size(section-spacing);
+        padding-bottom: _size(section-spacing);
+    }
+    @include breakpoint(small) {
+        padding-top: _size(section-spacing-small);
+        padding-bottom: _size(section-spacing-small);
+    }
+    @include breakpoint(xsmall) {
+        padding-top: _size(section-spacing-xsmall);
+        padding-bottom: _size(section-spacing-xsmall);
+    }
+}
 .root {
     @include vendor('display', 'flex');
     @include vendor('flex-direction', 'row-reverse');
     @include vendor('transition', 'opacity #{_duration(menu)} ease');
+    @include root-padding();
     margin: 0 auto;
     max-width: 100%;
     opacity: 1;
-    padding: (_size(section-spacing) * 1.5) _size(extra-menu-width);
     width: 100%;
-
     body.is-menu-visible & {
         opacity: 0.15;
     }
-    
     body.is-search-visible & {
         opacity: 0.15;
     }
@@ -19,30 +39,10 @@
     .page-post-detail & {
         display:block;
     }
-    @include breakpoint(xxlarge-up) {
-        padding: (_size(section-spacing) * 1.5);
-    }
-    @include breakpoint(xlarge-up) {
-    	max-width: 1680px;
-		.header-inner {
-			max-width: 1680px;
-			margin: 0 auto;
-		}
-	}
-    @include breakpoint(xlarge) {
-        padding: _size(section-spacing) _size(extra-menu-width);
-    }
+    
 
     @include breakpoint(large) {
         display: block;
     }
-	@include breakpoint(medium) {
-        padding: _size(section-spacing);
-	}
-    @include breakpoint(small) {
-        padding: _size(section-spacing-small);
-    }
-    @include breakpoint(xsmall) {
-        padding: _size(section-spacing-xsmall);
-    }
+    
 }

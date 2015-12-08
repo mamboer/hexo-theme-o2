@@ -2,7 +2,7 @@
     <div class="container sec-heading">
         <div class="row">
             <h2 class="sec-heading-main">凹凸文章/经验</h2>
-            <p class="sec-heading-sub">来自凹凸实验室神秘研发工程师的一些经验、技淫奇巧心德分享。</p>
+            <p class="sec-heading-sub">来自凹凸实验室研发工程师的一些经验、技淫奇巧心德分享。</p>
         </div>
     </div>
     <div class="container sec-main">
@@ -21,7 +21,7 @@
     </div>
     <div class="container sec-footer">
         <div class="row sec-actions">
-            <a href="{{ url_for('notes/') }}" class="btn btn-primary">查看更多文章 <i class="fa fa-fighter-jet"></i></a>
+            <a href="{{ url_for('notes/') }}" class="button">{{ __('post.view_more') }}</a>
         </div>
     </div>
 </div>

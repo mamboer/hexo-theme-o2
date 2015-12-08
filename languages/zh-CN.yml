@@ -36,19 +36,10 @@ post:
   next: 下一页
   last_updated: 上次更新：%s
   read_more: 阅读全文
+  view_more: 查看更多
   pv: 热度
   word_count: 字数 
-  posted: 发表于 
-
-cheers:
-  um: 嗯..
-  ok: OK
-  nice: 好
-  good: 很好
-  great: 非常好
-  excellent: 太棒了
-
-keep_on: 继续努力。
+  posted: 发表于
 
 counter:
   tag_cloud:
@@ -67,6 +58,9 @@ counter:
     other: "目前共计 %d 篇文章。"
 
 sidebar:
+  recommended_posts: 推荐文章
+  latest_posts: 文章列表
+  favlinks: 友情链接
   docs:
     getting_started: 开始使用
     overview: 概述
