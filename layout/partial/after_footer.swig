@@ -9,7 +9,6 @@
 {{ js('js/lang_select') }}
 {{ js('js/toc') }}
 {{ js('js/mobile_nav') }}
-{{ js('js/skel') }}
 {{ js('js/util') }}
 {{ js('js/main') }}
 {{ js('js/search') }}

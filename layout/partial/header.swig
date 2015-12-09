@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="navbar-collapse collapse" id="navbar-main">
-            <ul class="nav navbar-nav header-links">
+            <ul class="nav navbar-nav header-links header-links-main">
                 {{ header_menu('main-nav') }}
             </ul>
             <ul class="nav navbar-nav navbar-right header-links header-links-extra">

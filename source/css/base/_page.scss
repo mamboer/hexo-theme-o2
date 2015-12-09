@@ -20,14 +20,22 @@ body {
 	transition: background ease 1s;
     // Prevents animation/transition "flicker" on page load.
     // Automatically added/removed by js/main.js.
-        &.is-loading {
-            *, *:before, *:after {
-                @include vendor('animation', 'none !important');
-                @include vendor('transition', 'none !important');
-            }
+    &.is-loading {
+        *, *:before, *:after {
+            @include vendor('animation', 'none !important');
+            @include vendor('transition', 'none !important');
         }
+    }
 
     &.dark {
         background: _palette(bg-dark);
+    }
+    &.is-search-visible {
+        > * {
+            opacity: 0.15;
+        }
+        .slide-search {
+            opacity: 1;
+        } 
     }
 }

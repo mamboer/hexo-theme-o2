@@ -7,7 +7,7 @@
     </div>
     <div class="container sec-main">
 
-        {% set o2posts = process_posts(page) %}
+        {% set o2posts = process_posts(site) %}
         <div class="row home-posts">
             {% for post in o2posts %}
             {% if loop.index <= theme.layout.feature_count %}

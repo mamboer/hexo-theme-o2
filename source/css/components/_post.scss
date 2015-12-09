@@ -2,9 +2,13 @@
     @include padding(_size(section-spacing), _size(section-spacing));
     background: _palette(bg);
     border: solid 1px _palette(border);
-    margin: 0 0 _size(section-spacing) 0;
+    margin: _size(section-spacing) 0 0 0;
     position: relative;
     max-width: 100%;
+    &-wrap {
+        max-width: 100%;
+        overflow: hidden;
+    }
     &-anchor {
         margin-left: 10px;
         display: none;
@@ -123,11 +127,6 @@
         }
     }
     @include breakpoint(medium) {
-        border-left: 0;
-        border-right: 0;
-        left: _size(section-spacing) * -1;
-        width: calc(100% + (#{_size(section-spacing)} * 2));
-        max-width: calc(100% + (#{_size(section-spacing)} * 2));
 
         &-header {
             @include vendor('flex-direction', 'column');

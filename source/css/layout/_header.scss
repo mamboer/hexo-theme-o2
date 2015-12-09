@@ -39,53 +39,60 @@ body {
     }
     form {
         margin: 0;
-
-        input {
-            display: inline-block;
-            height: $header-input-height;
-            margin-top: ($navbar-height - $header-input-height)/2;
-            vertical-align: top;
+    }
+    input {
+        display: inline-block;
+        height: $header-input-height;
+        margin-top: ($navbar-height - $header-input-height)/2;
+        vertical-align: top;
+        @include breakpoint(medium-small) {
+            margin-top: 0;
         }
     }
-    
     &-links {
-        margin-left: 1.5em;
         @include header-anchor();
         .open >a {
             color: _palette(accent);
+            background-color: transparent;
+            box-shadow: 0 1px 2px _palette(border);
             &:hover, &:focus {
                 color: _palette(accent);
+                background-color: transparent;
             }
         }
-        .active {
-            a {
-                &:after {
-                    position:absolute;
-                    content:' ';
-                    bottom: 0;
-                    left: 0;
-                    height:2px;
-                    width: 100%;
-                    background-color: _palette(bg-primary);
+        &-main {
+            margin-left: 1.5em;
+            .active {
+                a {
+                    &:after {
+                        position:absolute;
+                        content:' ';
+                        bottom: 0;
+                        left: 0;
+                        height:2px;
+                        width: 100%;
+                        background-color: _palette(bg-primary);
+                    }
+                }
+            }
+            @include breakpoint(medium-small){
+                margin-left: 0;
+                .active {
+                    a {
+                        &:after {
+                            width: 2px;
+                            height: 50%;
+                            top:25%;
+                            bottom: auto;
+                        }
+                    }
                 }
             }
         }
         &-extra {
             margin-left: 0;
         }
-        @include breakpoint(medium-small){
-            margin-left: 0;
-            .active {
-                a {
-                    &:after {
-                        width: 2px;
-                        height: 50%;
-                        top:25%;
-                        bottom: auto;
-                    }
-                }
-            }
-        }
+        
     } 
 }
 .search {
@@ -105,12 +112,15 @@ body {
             opacity: 1;
             padding: 0 0.5em 0 0;
         }
-    }
-    &-ipt {
-        width: 12em;
-        &.error {
-            box-shadow:none !important;
-            border-color: _palette(highlight);
+        &-ipt {
+            &.error {
+                box-shadow:none !important;
+                border-color: _palette(highlight) !important;
+            }
         }
+    }
+    
+    &-wrap {
+        @include clearfix();
     }
 }

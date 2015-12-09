@@ -1,9 +1,9 @@
 menu:
   docs: 文档
   tags: 标签
-  archive: 时间轴
+  archive: 博客
   cates: 分类
-  news: 新闻
+  blog: 博客
   plugins: 插件
   themes: 主题
   search: 搜索

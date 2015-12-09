@@ -13,42 +13,40 @@
 
 {% block main %}
 
-<div id="main" class="main">
-    <div class="box box-white box-page">    
-    {# tagcloud page support #}
-    {% if page.type === "tags" %}
-      <div class="tag-cloud">
-        <div class="tag-cloud-title">
-            {{ _p('counter.tag_cloud', site.tags.length) }}
+{% if page.type === "tags" or page.type === "cates" or page.type === "about" %}
+{% include 'partial/index/banner.swig' %}
+{% endif %}
+<div class="container page-wrap">
+    <div class="root">
+        <div class="main">    
+        {# tagcloud page support #}
+        {% if page.type === "tags" %}
+        <div class="main-widget tag-cloud">
+            <div class="tag-cloud-title">
+                <h2>{{ _p('counter.tag_cloud', site.tags.length) }}</h2>
+            </div>
+            <div class="tag-cloud-items">
+            {{ tagcloud({min_font: 12, max_font: 30, amount: 200, color: true, start_color: '#ccc', end_color: '#111'}) }}
+            </div>
         </div>
-        <div class="tag-cloud-items">
-          {{ tagcloud({min_font: 12, max_font: 30, amount: 200, color: true, start_color: '#ccc', end_color: '#111'}) }}
+        {% elif page.type === 'cates' %}
+        <div class="main-widget cates-wrap">
+            <div class="cates-title">
+                <h2>{{ _p('counter.categories', site.categories.length) }}</h2>
+            </div>
+            <div class="cates">
+            {{ list_categories() }}
+            </div>
         </div>
-      </div>
-    {% elif page.type === 'categories' %}
-      <div class="cates-wrap">
-        <div class="cates-title">
-            {{ _p('counter.categories', site.categories.length) }}
+        {% else %}
+        {{ page.content }}
+        {% endif %}
+        {{ partial('partial/comment') }}
         </div>
-        <div class="cates">
-          {{ list_categories() }}
-        </div>
-      </div>
-    {% else %}
-      {{ page.content }}
-    {% endif %}
-    {{ partial('partial/comment') }}
     </div>
 </div>
 
-<section id="sidebar" class="sidebar">
-	
-    {% include 'partial/index/intro.swig' %}	
-    {% if not page.hideAbout %}
-    {% include 'partial/index/about.swig' %}
-    {% endif %}
-    {% include 'partial/footer.swig' %}
-</section>
+{% include 'partial/footer.swig' %}
 
 {% endblock %}
 

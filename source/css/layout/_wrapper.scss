@@ -32,12 +32,7 @@
     opacity: 1;
     width: 100%;
     background-color: #fff;
-    body.is-menu-visible & {
-        opacity: 0.15;
-    }
-    body.is-search-visible & {
-        opacity: 0.15;
-    }
+    
 
     .page-post-detail & {
         display:block;
@@ -48,4 +43,11 @@
         display: block;
     }
     
+}
+
+.page-wrap {
+    @include breakpoint(small) {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }

@@ -1,4 +1,4 @@
-{% set o2posts = process_posts(page) %}
+{% set o2posts = process_posts(site) %}
 {% if o2posts.length %}
 <section class="tiny-posts-wrap">
     <ul class="react-list tiny-posts">

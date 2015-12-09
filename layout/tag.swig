@@ -4,22 +4,19 @@
 {% block page_class %} page-tag {% endblock %}
 
 {% block main %}
-<div id="main" class="main">
-    <div class="header-page">
-        <h2 >"{{ page.tag }}" <small>{{  __('menu.tags')  }}</small></h2>
+<div class="container page-wrap">
+    <div class="root">
+        <div class="main">
+            <div class="page-heading">
+                <a href="{{ url_for('tags/') }}" class="button pull-right btn-goback">标签列表 <i class="fa fa-level-up"></i></a>
+                <h2 >"{{ page.tag }}" <small>{{  __('menu.tags')  }}</small></h2>
+            </div>
+            <div class="archives">
+                {% include 'partial/archive/mini_posts.swig' %}	
+            </div>
+            {% include 'partial/pagination.swig' %}
+        </div>
     </div>
-    <div class="box box-white archives archives-by-tag">
-        {% include 'partial/archive/mini_posts.swig' %}	
-    </div>
-    {% include 'partial/pagination.swig' %}
 </div>
-
-<section id="sidebar" class="sidebar">
-	
-    {% include 'partial/index/intro.swig' %}	
-
-    {% include 'partial/index/about.swig' %}
-
-    {% include 'partial/footer.swig' %}
-</section>
+{% include 'partial/footer.swig' %}
 {% endblock %}
