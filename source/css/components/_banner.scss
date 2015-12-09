@@ -13,6 +13,10 @@
         opacity: 0.02;
     }
     background-color: _palette(bg-primary);
+    .dark &{
+        background-color: _palette(bg-dark);
+    }
+    transition: background-color ease 1s;
     &-inner {
         z-index:3;
     }
@@ -27,6 +31,18 @@
             top: 50%;
             margin-top: -95px;
             left: - 95px;
+            @include breakpoint(xsmall) {
+                height: 160px;
+                width: 160px;
+                margin-top: -80px;
+                left: -80px;
+            }
+            @include breakpoint(xsmall) {
+                height: 130px;
+                width: 130px;
+                margin-top: -65px;
+                left: -65px;
+            }
         }
         &-2 {
             width: 100px;
@@ -36,6 +52,12 @@
             top: -50px;
             right:0;
             opacity:.8;
+            
+            @include breakpoint(xsmall) {
+                height: 80px;
+                width: 80px;
+                top: -40px;
+            }
         }
     }
     &-pic {
@@ -45,6 +67,12 @@
         height: 410px;
         img {
             max-width: 100%;
+        }
+        @include breakpoint(small) {
+            height: 350px;
+        }
+        @include breakpoint(xsmall) {
+            height: 200px;
         }
     }
 }

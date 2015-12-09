@@ -1,11 +1,11 @@
 .sec {
 	padding-bottom: _size(section-spacing) * 1.5;
-	&-heading, &-main, &-footer {
+    &-heading, &-main, &-footer {
 		position: relative;
 		z-index:2;
 	}
 	&-heading {
-		padding: (_size(section-spacing) * 1.5) 0;
+		padding: (_size(section-spacing) * 1.5) 0 (_size(section-spacing) * 1.2);
 		text-align: center;
 		&-main {
 			font-size: 1.3em;
@@ -13,20 +13,35 @@
 		&-sub {
 			margin-bottom: 0;
 		}
+        @include breakpoint(xsmall){
+            padding: _size(element-margin) 0;
+        }
 	}
 	&-footer {
-		padding-bottom: _size(section-spacing);
+		padding-bottom: 0;
 	}
 	&-actions {
 		text-align: center;
-	}
+	    margin-bottom: 0 !important;
+    }
 	&-cases {
 		background-color: #fff;
 	}
 	&-posts {
 		.home-posts {
 			margin-bottom: _size(element-margin);
+            @include breakpoint(xsmall){
+                margin-bottom: 0;
+            }
 		}
+        .sec-heading-main {
+            .dark & {
+                color: _palette(fg-light);
+            }
+        }
+        .dark & .button {
+            color: _palette(fg-light);
+        }
 	}
 	&-bg {
 		position:absolute;
@@ -51,7 +66,10 @@
 	&-about {
 		position:relative;
 		min-height: 400px;
-		.sec-bg1 {
+		@include breakpoint(small){
+            min-height: auto;
+        }
+        .sec-bg1 {
 			background-color: #fff;
 		}
 		.about-pic {
@@ -66,7 +84,7 @@
 		}
 		.about-actions {
 			text-align:center;
-			margin-top: _size(section-spacing-small);
+			margin-bottom: 0;
 		}
 	}
 	&-follow {

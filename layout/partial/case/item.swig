@@ -7,7 +7,7 @@
 			<h3 class="case-name">{{ item.name }}</h3>
 			<div class="case-desc">{{ item.desc }}</div>
 			{% if item.link %}
-			<a href="{{ item.link }}" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-github"></i> {{ __('menu.source') }}</a>
+			<a href="{{ item.link }}" target="_blank" class="lnk-github" title="{{ __('menu.source') }}"><i class="fa fa-github"></i></a>
 			{% endif %}
 		</figcaption>
 	</figure>

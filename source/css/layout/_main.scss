@@ -5,12 +5,16 @@
     &-widget {
         //border: 1px solid _palette(border);
         margin-bottom: _size(section-spacing);
-        padding: _size(section-spacing-xsmall) 0;
+        padding-bottom: _size(section-spacing-xsmall);
+        padding-top: _size(section-spacing-xsmall);
         h2 {
-            font-size: _size(min-font-size);
+            font-size: 0.9em;
         }
         &-hd {
             margin: 0 0 _size(element-margin) 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 }

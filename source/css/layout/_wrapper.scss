@@ -1,6 +1,6 @@
 @mixin root-padding {
-    padding-left: _size(section-spacing-xsmall);
-    padding-right: _size(section-spacing-xsmall);
+    padding-left: _size(section-spacing-small);
+    padding-right: _size(section-spacing-small);
     padding-top: (_size(section-spacing) * 1.5);
     padding-bottom: (_size(section-spacing) * 1.5);
     @include breakpoint(xxlarge-up) {
@@ -18,6 +18,8 @@
     @include breakpoint(xsmall) {
         padding-top: _size(section-spacing-xsmall);
         padding-bottom: _size(section-spacing-xsmall);
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 .root {
@@ -29,6 +31,7 @@
     max-width: 100%;
     opacity: 1;
     width: 100%;
+    background-color: #fff;
     body.is-menu-visible & {
         opacity: 0.15;
     }

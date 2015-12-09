@@ -84,17 +84,6 @@
         }
     }
 }
-.slide-menu {
-    @include slide-panel();
-    body.is-menu-visible & {
-        @include vendor('transform', 'translateX(0)');
-        visibility: visible;
-    }
-    .main-nav-item {
-        font-size: 0.8em;
-        font-weight: 800;
-    }
-}
 .slide-search {
     @include slide-panel();
     body.is-search-visible & {

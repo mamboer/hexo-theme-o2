@@ -18,4 +18,7 @@
     &-white {
         background-color: #ffffff;
     }
+    @include breakpoint(small) {
+        margin-bottom: (_size(element-margin) * 0.75);
+    }
 }

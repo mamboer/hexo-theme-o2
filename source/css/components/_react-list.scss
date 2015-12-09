@@ -1,0 +1,47 @@
+.react-list {
+    list-style: none;
+    padding: 0;
+    $li-padding: (_size(element-margin) * 0.75);
+    @mixin li-base {
+        border-top: dotted 1px _palette(border);
+        margin: $li-padding 0 0 0;
+        padding: $li-padding 0 0 0;
+    }
+    li {
+        @include li-base();
+        &:first-child {
+            border-top: 0;
+            margin-top: 0;
+            padding-top: 0;
+        }
+    }
+    @include breakpoint(large) {
+        @include vendor('display', 'flex');
+        @include vendor('flex-wrap', 'wrap');
+        width: calc(100% + #{_size(element-margin)});
+        margin-top: - $li-padding;
+        > li {
+            margin: _size(element-margin) _size(element-margin) 0 0;
+            width: calc(50% - #{_size(element-margin)});
+            &:first-child {
+                padding: (_size(element-margin) * 0.75) 0 0 0;
+            }
+        }
+
+        > :nth-child(-n + 2) {
+            margin-top: 0;
+            border-top: 0;
+        }
+    }
+    @include breakpoint(small) {
+        display: block;
+        width: 100%;
+        > li {
+            width: 100%;
+        }
+
+        > :nth-child(-n + 2) {
+            @include li-base();
+        }
+    }
+}

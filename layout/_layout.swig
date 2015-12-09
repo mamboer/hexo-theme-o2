@@ -16,7 +16,6 @@
     {% endblock %}
 	{% block main %}{% endblock %}
     {% block slide_menu %}
-    {{ partial('partial/slide_menu') }}
     {{ partial('partial/search_results') }}
     {% endblock %}
 	{% block backTop %}

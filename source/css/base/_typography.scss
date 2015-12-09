@@ -44,7 +44,7 @@ a {
     &:hover {
         border-bottom-color: transparent;
         color: _palette(accent);
-
+        text-decoration: none;
         &:before {
             color: _palette(accent) !important;
         }

@@ -77,7 +77,7 @@
     @include breakpoint(small-up) {
         margin: 0 0 _size(section-spacing) 0;
     }
-    @include breakpoint(xsmall) {
+    @include breakpoint(small) {
         display: block;
         width: 100%;
 

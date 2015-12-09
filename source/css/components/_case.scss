@@ -3,10 +3,22 @@
 	$caption-height: 130px;
 	position: relative;
 	margin-bottom: 5px;
+	margin-left:2.5px;
+	margin-right: 2.5px;
+    @include breakpoint(xsmall) {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 	&-wrap {
-		padding-left:2.5px;
-		padding-right: 2.5px;
-	}
+	    padding-left: 0;
+        padding-right: 0;
+        @include breakpoint(xsmall){
+            width:100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
 	&-cover {
 		border: none;
 		position: relative;

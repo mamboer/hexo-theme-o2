@@ -1,18 +1,9 @@
 (function($) {
 
-	skel.breakpoints({
-		xlarge:	'(max-width: 1680px)',
-		large:	'(max-width: 1280px)',
-		medium:	'(max-width: 980px)',
-		small:	'(max-width: 736px)',
-		xsmall:	'(max-width: 480px)'
-	});
-
 	$(function() {
 
 		var	$window = $(window),
 			$body = $('body'),
-			$menu = $('#menu'),
 			$sidebar = $('#sidebar'),
 			$main = $('#main');
 
@@ -32,32 +23,6 @@
 
 		// Fix: Placeholder polyfill.
 			$('form').placeholder();
-
-		// Prioritize "important" elements on medium.
-			skel.on('+medium -medium', function() {
-				$.prioritize(
-					'.important\\28 medium\\29',
-					skel.breakpoint('medium').active
-				);
-			});
-
-		// IE<=9: Reverse order of main and sidebar.
-			if (skel.vars.IEVersion <= 9)
-				$main.insertAfter($sidebar);
-
-		// Menu.
-			$menu
-                //.appendTo($body)
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'right',
-					target: $body,
-					visibleClass: 'is-menu-visible'
-				});
 
 		// Search (header).
 			var $search = $('#search'),
@@ -99,18 +64,6 @@
 					}, 200);
 				});
 
-		// Intro.
-			var $intro = $('#intro');
-
-			// Move to main on <=large, back to sidebar on >large.
-				skel
-					.on('+large', function() {
-						$intro.prependTo($main);
-					})
-					.on('-large', function() {
-						$intro.prependTo($sidebar);
-					});
-
         // Back Top
         var $backTop = $('#backTop');
         $window.on('scroll.backtop', debounce(function () {
@@ -136,29 +89,22 @@
             theme: 'light',
             init: function(){
                 var theme = this.ls.getItem(this.key) || this.theme;
-                this.$title = $('#themeTitle');
-                this.$btn = $('#themeSwitcher').on('click',function(e){
+                this.$items = $('#theme-list li').on('click',function(e){
                     if(theme === 'dark'){
                         theme = 'light';
                     } else {
                         theme = 'dark';
                     }
                     ts.setTheme(theme);
-                    return false;
                 });
-                this.$btn.dark = this.$btn.attr('data-dark');
-                this.$btn.light = this.$btn.attr('data-light');
                 this.setTheme(theme);
             },
             setTheme:function(theme){
-                var reverse = {
-                    dark: 'light',
-                    light: 'dark'
-                };
+                this.$items.removeClass('active');
+                this.$items.filter('[data-v="' + theme +'"]').addClass('active');
                 this.theme = theme;
                 this.ls.setItem(this.key, theme);
                 $body.removeClass('dark light').addClass(theme);
-                this.$title.html(this.$btn[reverse[theme]]);
             }
         };
         ts.init();

@@ -1,25 +1,34 @@
 .sidebar {
     margin-right: _size(element-margin);
-    min-width: 20em;
-    width: 20em;
+    min-width: 18em;
+    width: 18em;
 
     &-widget {
         //border: 1px solid _palette(border);
         margin-bottom: _size(section-spacing);
-        padding: _size(section-spacing-xsmall);
+        padding-bottom: _size(section-spacing-xsmall);
+        padding-top: _size(section-spacing-xsmall);
         h2 {
-            font-size: _size(min-font-size);
+            font-size: 0.9em;
         }
         &-hd {
             margin: 0 0 _size(element-margin) 0;
         }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @include breakpoint(small) {
+            padding-top: _size(element-margin)/4;
+            padding-bottom: _size(element-margin)/4;
+        }
     }
 
     @include breakpoint(large) {
-        border-top: solid 1px _palette(border);
-        margin: _size(section-spacing) 0 0 0;
         min-width: 0;
-        padding: _size(section-spacing) 0 0 0;
         width: 100%;
+        margin-top: (_size(element-margin))/2;
+    }
+    @include breakpoint(small) {
+        margin-top: 0;
     }
 }

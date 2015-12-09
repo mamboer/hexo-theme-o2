@@ -1,6 +1,6 @@
 <div class="sec sec-posts">
-    <div class="container sec-heading">
-        <div class="row">
+    <div class="container">
+        <div class="sec-heading">
             <h2 class="sec-heading-main">凹凸文章/经验</h2>
             <p class="sec-heading-sub">来自凹凸实验室研发工程师的一些经验、技淫奇巧心德分享。</p>
         </div>
@@ -20,8 +20,8 @@
         </div>
     </div>
     <div class="container sec-footer">
-        <div class="row sec-actions">
-            <a href="{{ url_for('notes/') }}" class="button">{{ __('post.view_more') }}</a>
-        </div>
+        <ul class="actions sec-actions">
+            <li><a href="{{ url_for('notes/') }}" class="button">{{ __('post.view_more') }}</a></li>
+        </ul>
     </div>
 </div>
