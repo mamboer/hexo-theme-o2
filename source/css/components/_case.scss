@@ -15,8 +15,8 @@
         padding-right: 0;
         @include breakpoint(xsmall){
             width:100%;
-            padding-left: 15px;
-            padding-right: 15px;
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 	&-cover {
