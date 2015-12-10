@@ -97,7 +97,7 @@
         cursor: default;
         list-style: none;
         padding: 0;
-
+        margin-bottom: _size(element-margin)/2;
         li {
             border-left: solid 1px _palette(border);
             display: inline-block;
