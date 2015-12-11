@@ -1,5 +1,5 @@
 <!-- keywords -->
-<meta name="keywords" name="{{ page_keywords(true) }}"/>
+<meta name="keywords" content="{{ page_keywords(true) }}"/>
 <!-- Canonical links -->
 <link rel="canonical" href="{{ url }}">
 <!-- Alternative links -->
