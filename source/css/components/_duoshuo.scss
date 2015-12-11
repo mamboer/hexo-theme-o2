@@ -248,7 +248,11 @@
     }
 
     /*duoshuo UA style end*/
- 
+    #ds-notify {
+        right: 15px !important;
+        bottom: 15px !important;
+        top: auto !important;
+    } 
     @include breakpoint(xsmall){
         .ds-replybox {
             padding-left: 0 !important;
