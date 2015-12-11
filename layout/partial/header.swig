@@ -4,7 +4,7 @@
             <a href="{{ url_for('index.html') }}" title="{{ config.title }}" class="navbar-brand">
                 <img src="{{ url_for(config.logo_url|default(theme.logo.url)) }}" alt="{{ config.title }}"/>
             </a>
-            <div class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main">
+            <div onclick="javascript:void(0)" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
