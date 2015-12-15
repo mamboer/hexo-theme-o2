@@ -4,7 +4,7 @@
 			{% if item.logo %}
             <div class="case-cover-inner">
                 <img class="case-logo" src="{{ item.logo }}" alt="{{ item.name  }}"/>
-                <p class="case-title">{{ item.name }}</p>
+                <p class="case-title"{% if item.tc %} style="color:#{{ item.tc }}"{% endif %}>{{ item.name }}</p>
             </div>
             {% endif %}
 
