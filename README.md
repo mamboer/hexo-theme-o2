@@ -6,7 +6,7 @@ The most beautiful theme for Hexo, flat and delicate, created and maintained by 
 
 [Preview](http://aotu.io/)
 
-![o2](https://cdn.rawgit.com/o2team/hexo-theme-o2/master/preview.png "aotu.io")
+![o2](https://cdn.rawgit.com/o2team/hexo-theme-o2/master/preview.webp "aotu.io")
 
 ## Installation
 
