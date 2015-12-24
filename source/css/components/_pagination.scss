@@ -63,7 +63,7 @@
         }
     }
     .space {
-        padding: 0;
+        padding: 0 5px;
         margin: 0;
     }
     .prev {
@@ -94,11 +94,13 @@
         @include clearfix();
         display: block;
         &-prev, &-next {
+            max-width: 49%;
         	a {
 				white-space: nowrap;
   				overflow: hidden;
   				text-overflow: ellipsis;
-        	}
+        	    max-width: 100%;
+            }
 		}
         &-prev {
             float:left;
