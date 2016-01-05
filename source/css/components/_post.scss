@@ -126,6 +126,14 @@
             }
         }
     }
+    &-content {
+        >ol, >ul {
+            margin-bottom: _size(element-margin) * 0.8;
+            @include breakpoint(small) {
+                margin-bottom: _size(element-margin) * 0.7;
+            }
+        }
+    }
     @include breakpoint(medium) {
 
         &-header {
