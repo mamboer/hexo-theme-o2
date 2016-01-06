@@ -9,14 +9,3 @@ var _hmt = _hmt || [];
 })();
 </script>
 {% endif %}
-
-{% if config.baidu_push or theme.baidu_push %}
-<script>
-(function(){
-    var bp = document.createElement('script');
-    bp.src = '//push.zhanzhang.baidu.com/push.js';
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-{% endif %}
