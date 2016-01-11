@@ -13,10 +13,16 @@
             {% endif %}
 		</a>
 		<a class="case-info" href="{{ item.preview }}" target="_blank">
+            {% if item.qrcode %}
+            <div class="case-caption case-qrcode-wrap">
+                <img src="{{ url_for(item.qrcode) }}" alt="qrcode" class="case-qrcode"/>
+            </div>
+            {% else %}
             <figcaption class="case-caption">
                 <h3 class="case-name">{{ item.name }}</h3>
                 <div class="case-desc">{{ item.desc }}</div>
             </figcaption>
+            {% endif %}
         </a>
         {% if item.link %}
         <a href="{{ item.link }}" target="_blank" class="lnk-icon lnk-github" title="{{ __('menu.source') }}"><i class="fa fa-github"></i></a>
