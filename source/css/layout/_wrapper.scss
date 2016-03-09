@@ -51,3 +51,39 @@
         padding-right: 0;
     }
 }
+.compat {
+    padding-top: 0;
+    .header {
+        display: none;
+    }
+    .post-stats {
+        display: none;
+    }
+    .pagination-post {
+        display: none;
+    }
+    .post-comments {
+        display: none;
+    }
+}
+.nohd {
+    padding-top: 0;
+    .header {
+        display: none;
+    }
+}
+.nostats {
+    .post-stats {
+        display: none;
+    }
+}
+.nopager {
+    .pagination-post {
+        display: none;
+    }
+}
+.nocm {
+    .post-comments {
+        display: none;
+    }
+}
