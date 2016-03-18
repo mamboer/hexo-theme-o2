@@ -1,0 +1,16 @@
+.sec {
+	&-follow-lite {
+        padding: 0px;
+		.follow-icon {
+			width:24px;
+			height:24px;
+			vertical-align: -6px;	
+		}
+		.follow-acount {
+			font-size: 0.8em;
+		}
+        .sec-heading {
+            padding-bottom: 0;
+        }
+	}
+}
