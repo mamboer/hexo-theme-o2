@@ -108,11 +108,11 @@ hexo.extend.helper.register('post_key', function(path){
  * filter feature posts
  */
 hexo.extend.helper.register('process_posts', function(obj){
+    var items = obj.posts.sort('-date');
     if (obj.o2posts) {
         return obj.o2posts;    
     }
-    var items = obj.posts,
-        items1 = [],
+    var items1 = [],
         items2 = [];
     items.each(function(post){
         if (post.sticky) {
