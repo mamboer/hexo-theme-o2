@@ -1,10 +1,11 @@
 > This theme is inspired by the [`Future Imperfect`](http://html5up.net/future-imperfect) responsive HTML5 template.
+> Hexo 3.2.0 is not compatible with node v6.x.x, so use this theme under node v5.x.x.
 
 # O2
 
 The most beautiful theme for Hexo, flat and delicate, created and maintained by [AOTU Labs](http://aotu.io). 
 
-[Preview](http://aotu.io/)
+[Preview](http://faso.me/)
 
 ![o2](https://cdn.rawgit.com/o2team/hexo-theme-o2/master/preview.webp "aotu.io")
 
@@ -16,7 +17,7 @@ The most beautiful theme for Hexo, flat and delicate, created and maintained by 
 $ git clone https://github.com/o2team/hexo-theme-o2.git themes/o2
 ```
 
-**Hueman requires Hexo 3.0.0 and above.**
+** hexo-theme-o2 requires Hexo 3.0.0 and above.**
 
 ### Enable
 
@@ -180,6 +181,7 @@ In your hexo site's configuration,
 # lunr
 lunr:
   field: all
+  fulltext: false
   path: assets/lunr/
 ```
 
@@ -190,7 +192,7 @@ For more details about [hexo-generator-lunr](o2team/hexo-generator-lunr)
 English and Simplified Chinese are the default languages of the theme. You can add translations in the `languages` folder and change the default language in blog's `_config.yml`.
 
 ``` yml
-language: zh-CN
+language: zh-cn
 ```
 
 ## Development

@@ -5,7 +5,7 @@
         xhr,
         idx,
 		store,
-        $form = $('.search-form').on('submit',function(e){
+        $form = $('.search-trigger').on('submit',function(e){
             var $input = $(this).find('input');
             $input.removeClass('error');
             term = $input.val();

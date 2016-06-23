@@ -111,7 +111,7 @@ hexo.extend.helper.register('process_posts', function(obj){
     if (obj.o2posts) {
         return obj.o2posts;    
     }
-    var items = obj.posts,
+    var items = obj.posts.sort('-date'),
         items1 = [],
         items2 = [];
     items.each(function(post){

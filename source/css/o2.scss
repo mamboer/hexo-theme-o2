@@ -47,9 +47,7 @@
 @import 'components/follow';
 @import 'components/custom';
 
-@if $duoshuo {
 @import 'components/duoshuo';
-}
 
 
 // Layout.

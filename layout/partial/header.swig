@@ -17,7 +17,7 @@
             <ul class="nav navbar-nav navbar-right header-links header-links-extra">
                 <li class="search-wrap">
                     <a class="fa fa-search search-icon" href="#search" title="{{ __('menu.search') }}"></a>
-                    <form id="search" method="get" class="search-form">
+                    <form id="search" method="get" class="search-trigger search-form">
                         <input type="text" name="query" class="search-form-ipt" placeholder="{{ __('menu.search') }}" />
                     </form>
                 </li>

@@ -2,7 +2,7 @@
 
 <!-- Search -->
     <section>
-        <form class="search" method="get">
+        <form class="search-trigger search" method="get">
             <input type="text" name="query" placeholder="{{ __('menu.search') }}" />
         </form>
     </section>
