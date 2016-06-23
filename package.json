@@ -1,7 +1,7 @@
 {
   	"name": "hexo-theme-o2",
 	"description": "The most beautiful theme for Hexo, flat and delicate, created and maintained by [AOTU Labs](http://aotu.io).", 
-  	"version": "0.9.1",
+  	"version": "0.9.2",
   	"private": true,
 	"author": {
 		"name": "o2team",
